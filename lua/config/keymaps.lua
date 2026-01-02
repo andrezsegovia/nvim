@@ -1,0 +1,28 @@
+-- Exit insert mode with jk
+vim.keymap.set("i", "jk", "<ESC>")
+
+-- Disable ESC in insert mode
+vim.keymap.set("i", "<ESC>", "<nop>")
+
+-- Disable arrow keys in all modes
+vim.keymap.set({"n", "v", "i"}, "<Up>", "<nop>")
+vim.keymap.set({"n", "v", "i"}, "<Down>", "<nop>")
+vim.keymap.set({"n", "v", "i"}, "<Left>", "<nop>")
+vim.keymap.set({"n", "v", "i"}, "<Right>", "<nop>")
+
+-- Window navigation
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+-- Visual mode indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- Search in current file
+vim.keymap.set("n", "<leader>fs", "<cmd>FzfLua blines<cr>", { desc = "Search in current file" })
+
+-- Buffer navigation
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })

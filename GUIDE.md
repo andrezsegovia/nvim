@@ -1,0 +1,151 @@
+# NeoVim Configuration Guide
+
+## Overview
+This NeoVim configuration uses LazyVim as the plugin manager with a minimal setup focused on development productivity.
+
+## Key Bindings
+
+### Leader Keys
+- **Global Leader**: `Space`
+- **Local Leader**: `\` (Backslash)
+
+### Navigation
+- `Ctrl+h/j/k/l`: Move between windows
+- `j/k`: Smart line movement (visual lines when wrapped)
+
+### Buffer Management
+- `<leader>bn`: Next buffer
+- `<leader>bp`: Previous buffer
+
+### File Operations
+- `Ctrl+s`: Save file
+- `Esc`: Clear search highlighting
+
+### LSP (Language Server Protocol)
+- `gd`: Go to definition
+- `gr`: Go to references
+- `K`: Show hover documentation
+- `<leader>ca`: Code actions
+- `<leader>rn`: Rename symbol
+
+### Completion
+- `Tab`: Next completion item / expand snippet
+- `Ctrl+Space`: Trigger completion
+- `Enter`: Confirm selection
+- `Ctrl+e`: Abort completion
+
+### Fuzzy Finder (fzf-lua)
+- `<leader>ff`: Find files
+- `<leader>fg`: Live grep (search in files)
+- `<leader>fs`: Search in current file
+- `<leader>fb`: Find buffers
+- `<leader>fh`: Help tags
+- `<leader>fr`: Recent files
+- `<leader>fc`: Commands
+
+### Git (gitsigns)
+- `]c`: Next hunk
+- `[c`: Previous hunk
+- `<leader>hs`: Stage hunk
+- `<leader>hr`: Reset hunk
+- `<leader>hS`: Stage buffer
+- `<leader>hu`: Undo stage hunk
+- `<leader>hR`: Reset buffer
+- `<leader>hp`: Preview hunk
+- `<leader>hb`: Blame line
+- `<leader>hd`: Diff this
+
+### Git History (fugitive)
+- `<leader>gs`: Git status
+- `<leader>gl`: Git log (oneline)
+- `<leader>gL`: Git log (detailed)
+- `<leader>gb`: Git blame
+- `<leader>gf`: File history
+
+### Utilities
+- `<leader>u`: Toggle undotree
+
+## Configuration Structure
+
+```
+~/.config/nvim/
+├── init.lua                    # Main entry point
+├── lua/
+│   ├── config/
+│   │   ├── options.lua         # Editor options
+│   │   ├── keymaps.lua         # Key mappings
+│   │   └── lazy.lua            # Plugin manager setup
+│   └── plugins/
+│       ├── colorscheme.lua     # Tokyo Night theme
+│       ├── treesitter.lua      # Syntax highlighting
+│       ├── lsp.lua             # Language servers
+│       ├── completion.lua      # Auto-completion
+│       ├── fzf.lua             # Fuzzy finder
+│       ├── git.lua             # Git integration
+│       └── undotree.lua        # Undo history
+```
+
+## Editor Settings
+
+### Tabs and Indentation
+- Tab width: 2 spaces
+- Expand tabs: Enabled
+- Auto-indent: Enabled
+
+### Clipboard
+- System clipboard integration via `unnamedplus`
+
+### UI Features
+- Line numbers: Enabled (relative)
+- Sign column: Always visible
+- Terminal colors: Enabled
+- Persistent undo: Enabled
+
+## Language Support
+
+### Syntax Highlighting (Treesitter)
+- Markdown
+- Lua
+- Java
+- Bash
+
+### Language Servers (LSP)
+- **Lua**: `lua_ls` with Neovim-specific configuration
+- **Java**: `jdtls` (Eclipse JDT Language Server)
+
+### Auto-completion
+- LSP-based completion
+- Buffer-based completion
+- Path completion
+- Snippet support via LuaSnip
+
+## Plugins Used
+
+1. **lazy.nvim**: Plugin manager with lazy loading
+2. **tokyonight.nvim**: Color scheme
+3. **nvim-treesitter**: Syntax highlighting and parsing
+4. **nvim-lspconfig**: LSP client configuration
+5. **mason.nvim**: LSP server installer
+6. **nvim-cmp**: Completion engine
+7. **LuaSnip**: Snippet engine
+8. **fzf-lua**: Fuzzy finder for files, buffers, and more
+9. **gitsigns.nvim**: Git integration with hunk navigation and staging
+10. **vim-fugitive**: Git history navigation and repository management
+11. **undotree**: Undo history visualization
+
+## First Run
+On first startup, LazyVim will automatically:
+1. Install itself
+2. Download and install all configured plugins
+3. Install language servers for Java and Lua
+4. Set up syntax highlighting for specified languages
+
+## Customization
+To add more languages or plugins, modify the respective files in `lua/plugins/`. The configuration follows LazyVim conventions for easy extension.
+
+**MANDATORY RULE**: ALWAYS update this GUIDE.md with ALL configuration changes:
+- ALL new keybindings in the Key Bindings section
+- ALL new files in Configuration Structure
+- ALL new plugins in Plugins Used section
+- ALL configuration modifications and their purposes
+- Keep documentation current with every change
