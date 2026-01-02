@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("amazonq").setup({
-      ssoStartUrl = 'place you SSO URL here'
+      ssoStartUrl = 'https://twdc-qdeveloper.awsapps.com/start'
     })
   end,
 }

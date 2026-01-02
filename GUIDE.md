@@ -20,6 +20,30 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 ### File Operations
 - `Ctrl+s`: Save file
 - `Esc`: Clear search highlighting
+- `<leader>e`: Toggle file explorer
+
+### File Explorer (nvim-tree)
+- `Enter/o`: Open file
+- `v`: Open file in vertical split
+- `s`: Open file in horizontal split
+
+### Debug (DAP)
+- `<leader>db`: Toggle breakpoint
+- `<leader>dc`: Continue/Start debugging
+- `<leader>di`: Step into
+- `<leader>do`: Step over
+- `<leader>dO`: Step out
+- `<leader>dt`: Terminate debugging
+
+**To start Java debugging:**
+1. Start Java app with debug mode: `java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 YourApp`
+2. Set breakpoints in Neovim with `<leader>db`
+3. Attach debugger with `<leader>dc`
+
+**Debug command examples:**
+- Single class: `java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 HelloWorld`
+- JAR file: `java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar myapp.jar`
+- With classpath: `java -cp "lib/*:." -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 com.example.Main`
 
 ### LSP (Language Server Protocol)
 - `gd`: Go to definition
@@ -82,7 +106,9 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 │       ├── completion.lua      # Auto-completion
 │       ├── fzf.lua             # Fuzzy finder
 │       ├── git.lua             # Git integration
-│       └── undotree.lua        # Undo history
+│       ├── undotree.lua        # Undo history
+│       ├── nvim-tree.lua       # File explorer
+│       └── dap.lua             # Debug adapter protocol
 ```
 
 ## Editor Settings
@@ -132,6 +158,8 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 9. **gitsigns.nvim**: Git integration with hunk navigation and staging
 10. **vim-fugitive**: Git history navigation and repository management
 11. **undotree**: Undo history visualization
+12. **nvim-tree.lua**: File explorer with tree view
+13. **nvim-dap**: Debug adapter protocol with Java support and UI
 
 ## First Run
 On first startup, LazyVim will automatically:
