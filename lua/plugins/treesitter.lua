@@ -10,7 +10,7 @@ return {
       end
       
       configs.setup({
-        ensure_installed = { "lua", "java", "markdown", "bash" },
+        ensure_installed = { "lua", "java", "markdown", "markdown_inline", "bash" },
         auto_install = true,
         highlight = {
           enable = true,

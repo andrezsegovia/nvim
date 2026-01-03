@@ -32,3 +32,7 @@ opt.splitbelow = true
 -- Other
 opt.termguicolors = true
 opt.undofile = true
+
+-- Markdown concealing
+opt.conceallevel = 2
+opt.concealcursor = "niv"

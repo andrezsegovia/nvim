@@ -108,7 +108,8 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 │       ├── git.lua             # Git integration
 │       ├── undotree.lua        # Undo history
 │       ├── nvim-tree.lua       # File explorer
-│       └── dap.lua             # Debug adapter protocol
+│       ├── dap.lua             # Debug adapter protocol
+│       └── render-markdown.lua # Markdown rendering
 ```
 
 ## Editor Settings
@@ -131,6 +132,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 
 ### Syntax Highlighting (Treesitter)
 - Markdown
+- Markdown inline (code blocks)
 - Lua
 - Java
 - Bash
@@ -160,6 +162,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 11. **undotree**: Undo history visualization
 12. **nvim-tree.lua**: File explorer with tree view
 13. **nvim-dap**: Debug adapter protocol with Java support and UI
+14. **render-markdown.lua**: Markdown rendering
 
 ## First Run
 On first startup, LazyVim will automatically:
