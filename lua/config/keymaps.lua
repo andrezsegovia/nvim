@@ -27,6 +27,9 @@ vim.keymap.set("n", "<leader>fs", "<cmd>FzfLua blines<cr>", { desc = "Search in 
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 
+-- Clear search highlighting with double Escape
+vim.keymap.set("n", "<ESC><ESC>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlighting" })
+
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
 

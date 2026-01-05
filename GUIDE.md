@@ -19,7 +19,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 
 ### File Operations
 - `Ctrl+s`: Save file
-- `Esc`: Clear search highlighting
+- `ESC ESC`: Clear search highlighting
 - `<leader>e`: Toggle file explorer
 
 ### File Explorer (nvim-tree)
