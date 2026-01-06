@@ -5,6 +5,10 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 
 ## Key Bindings
 
+### Register Popup
+- `"` (double quote, normal/visual): Open register popup (registers.nvim)
+- `Ctrl+R` (insert): Open register popup (registers.nvim)
+
 ### Leader Keys
 - **Global Leader**: `Space`
 - **Local Leader**: `\` (Backslash)
@@ -162,7 +166,8 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 11. **undotree**: Undo history visualization
 12. **nvim-tree.lua**: File explorer with tree view
 13. **nvim-dap**: Debug adapter protocol with Java support and UI
-14. **render-markdown.lua**: Markdown rendering
+14. **registers.nvim**: Popup for register selection (" in normal/visual, Ctrl+R in insert)
+15. **render-markdown.lua**: Markdown rendering
 
 ## First Run
 On first startup, LazyVim will automatically:

@@ -32,6 +32,7 @@ opt.splitbelow = true
 -- Other
 opt.termguicolors = true
 opt.undofile = true
+opt.undodir = vim.fn.stdpath("data") .. "/undo"
 
 -- Markdown concealing
 opt.conceallevel = 2
