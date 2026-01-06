@@ -79,7 +79,7 @@ return {
           map("<leader>rn", vim.lsp.buf.rename, "Rename")
           map("]d", vim.diagnostic.goto_next, "Next Diagnostic")
           map("[d", vim.diagnostic.goto_prev, "Previous Diagnostic")
-          map("<leader>e", vim.diagnostic.open_float, "Show Diagnostic")
+          map("<leader>d", vim.diagnostic.open_float, "Show Diagnostic")
           map("<leader>q", vim.diagnostic.setloclist, "Diagnostic List")
         end,
       })
