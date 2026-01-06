@@ -30,6 +30,12 @@ vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffe
 -- Clear search highlighting with double Escape
 vim.keymap.set("n", "<ESC><ESC>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlighting" })
 
+-- Spell checking
+vim.keymap.set("n", "<leader>sp", "<cmd>set spell!<cr>", { desc = "Toggle spell check" })
+vim.keymap.set("n", "]s", "]s", { desc = "Next misspelled word" })
+vim.keymap.set("n", "[s", "[s", { desc = "Previous misspelled word" })
+vim.keymap.set("n", "z=", "z=", { desc = "Spelling suggestions" })
+
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
 

@@ -17,6 +17,12 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 - `Ctrl+h/j/k/l`: Move between windows
 - `j/k`: Smart line movement (visual lines when wrapped)
 
+### Markdown & Obsidian Navigation
+- `gf`: Follow markdown links and Obsidian wikilinks
+- `Enter`: Follow link under cursor (follow-md-links)
+- `Ctrl+o`: Go back to previous location
+- `Ctrl+i`: Go forward in jump list
+
 ### Buffer Management
 - `<leader>bn`: Next buffer
 - `<leader>bp`: Previous buffer
@@ -93,6 +99,14 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 ### Utilities
 - `<leader>u`: Toggle undotree
 
+### Spell Checking
+- `<leader>sp`: Toggle spell check
+- `]s`: Next misspelled word
+- `[s`: Previous misspelled word
+- `z=`: Show spelling suggestions
+- `zg`: Add word to dictionary
+- `zw`: Mark word as wrong
+
 ## Configuration Structure
 
 ```
@@ -168,6 +182,8 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 13. **nvim-dap**: Debug adapter protocol with Java support and UI
 14. **registers.nvim**: Popup for register selection (" in normal/visual, Ctrl+R in insert)
 15. **render-markdown.lua**: Markdown rendering
+16. **obsidian.nvim**: Obsidian vault integration with wikilink navigation
+17. **follow-md-links.nvim**: Enhanced markdown link following
 
 ## First Run
 On first startup, LazyVim will automatically:

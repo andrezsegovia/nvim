@@ -37,3 +37,7 @@ opt.undodir = vim.fn.stdpath("data") .. "/undo"
 -- Markdown concealing
 opt.conceallevel = 2
 opt.concealcursor = "niv"
+
+-- Spell checking
+opt.spell = true
+opt.spelllang = { "en", "es" }
