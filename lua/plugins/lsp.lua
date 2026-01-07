@@ -8,7 +8,7 @@ return {
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "jdtls" },
+        ensure_installed = { "lua_ls" },
       })
 
       -- Lua LSP
@@ -24,46 +24,7 @@ return {
         },
       }
 
-      -- Java LSP
-      vim.lsp.config.jdtls = {
-        cmd = { "jdtls" },
-        capabilities = vim.tbl_deep_extend("force", vim.lsp.protocol.make_client_capabilities(), {
-          textDocument = {
-            completion = {
-              completionItem = {
-                resolveSupport = {
-                  properties = {}
-                }
-              }
-            }
-          }
-        }),
-        settings = {
-          java = {
-            configuration = {
-              runtimes = {
-                {
-                  name = "JavaSE-1.8",
-                  path = "/usr/libexec/java_home -v 1.8",
-                },
-                {
-                  name = "JavaSE-11",
-                  path = "/usr/libexec/java_home -v 11",
-                },
-                {
-                  name = "JavaSE-17",
-                  path = "/usr/libexec/java_home -v 17",
-                },
-              },
-            },
-            compile = {
-              nullAnalysis = {
-                mode = "automatic",
-              },
-            },
-          },
-        },
-      }
+      -- Java LSP is handled by nvim-jdtls plugin
 
       -- LSP keymaps
       vim.api.nvim_create_autocmd("LspAttach", {

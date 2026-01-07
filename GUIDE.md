@@ -138,7 +138,8 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 │   └── plugins/
 │       ├── colorscheme.lua     # Tokyo Night theme
 │       ├── treesitter.lua      # Syntax highlighting
-│       ├── lsp.lua             # Language servers
+│       ├── lsp.lua             # Language servers (Lua)
+│       ├── jdtls.lua           # Java language server with Lombok
 │       ├── completion.lua      # Auto-completion
 │       ├── fzf.lua             # Fuzzy finder
 │       ├── git.lua             # Git integration
@@ -175,7 +176,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 
 ### Language Servers (LSP)
 - **Lua**: `lua_ls` with Neovim-specific configuration
-- **Java**: `jdtls` (Eclipse JDT Language Server)
+- **Java**: `jdtls` (Eclipse JDT Language Server) with Lombok support
 
 ### Auto-completion
 - LSP-based completion
@@ -198,10 +199,11 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 11. **undotree**: Undo history visualization
 12. **nvim-tree.lua**: File explorer with tree view
 13. **nvim-dap**: Debug adapter protocol with Java support and UI
-14. **registers.nvim**: Popup for register selection (" in normal/visual, Ctrl+R in insert)
-15. **render-markdown.lua**: Markdown rendering
-16. **obsidian.nvim**: Obsidian vault integration with wikilink navigation
-17. **follow-md-links.nvim**: Enhanced markdown link following
+15. **registers.nvim**: Popup for register selection (" in normal/visual, Ctrl+R in insert)
+16. **render-markdown.lua**: Markdown rendering
+17. **obsidian.nvim**: Obsidian vault integration with wikilink navigation
+18. **follow-md-links.nvim**: Enhanced markdown link following
+19. **nvim-jdtls**: Dedicated Java Language Server with Lombok support
 
 ## First Run
 On first startup, LazyVim will automatically:
