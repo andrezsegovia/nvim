@@ -7,16 +7,7 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    workspaces = {
-      {
-        name = "work notes",
-        path = "/Users/andrez.segovia/workNotes",
-      },
-      {
-        name = "notes",
-        path = "/Users/andrez.segovia/temp/notes"
-      },
-    },
+    workspaces = {},
     note_id_func = function(title)
       -- Create filename from title
       if title ~= nil then
