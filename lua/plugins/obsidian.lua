@@ -13,7 +13,7 @@ return {
 
     -- List your vault paths
     local vault_paths = {
-      vim.fn.expand("~/brain")
+      vim.fn.expand("~/vaults")
     }
 
     for _, vault in ipairs(vault_paths) do
@@ -33,24 +33,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "brain",
-        path = "~/brain",
-        overrides = {
-          templates = {
-            folder = "Templates",
-            date_format = "%a-%d-%m-%Y",
-            time_format = "%H:%M",
-            substitutions = {
-              journalDate = function()
-                return os.date("%a%d%m%Y.md|%a-%d-%m-%Y")
-              end,
-            },
-          },
-          daily_notes = {
-            date_format = "%a%d%m%Y",
-            template = "Journal.md",
-          },
-        }
+        name = "vault",
+        path = "~/vaults/vault",
       },
     },
     note_id_func = function(title)
@@ -71,5 +55,19 @@ return {
       vim.fn.jobstart({"open", url})
     end,
     disable_frontmatter = true,
+    templates = {
+      folder = "Templates",
+      date_format = "%a-%d-%m-%Y",
+      time_format = "%H:%M",
+      substitutions = {
+        journalDate = function()
+          return os.date("%a%d%m%Y.md|%a-%d-%m-%Y")
+        end,
+      },
+    },
+    daily_notes = {
+      date_format = "%a%d%m%Y",
+      template = "Journal.md",
+    },
   },
 }
