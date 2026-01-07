@@ -116,6 +116,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 │   ├── config/
 │   │   ├── options.lua         # Editor options
 │   │   ├── keymaps.lua         # Key mappings
+│   │   ├── autocmds.lua        # Auto commands (markdown wrapping)
 │   │   └── lazy.lua            # Plugin manager setup
 │   └── plugins/
 │       ├── colorscheme.lua     # Tokyo Night theme
