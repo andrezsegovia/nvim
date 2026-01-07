@@ -23,6 +23,26 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 - `Ctrl+o`: Go back to previous location
 - `Ctrl+i`: Go forward in jump list
 
+### Obsidian Notes
+- `<leader>on`: Create new note
+- `<leader>oo`: Open note
+- `<leader>os`: Search notes
+- `<leader>oq`: Quick switch notes
+- `<leader>of`: Follow link
+- `<leader>ob`: Show backlinks
+- `<leader>or`: Rename note
+- `<leader>ot`: Show tags
+- `<leader>ol`: Show links
+- `<leader>ow`: Switch workspace
+- `<leader>od`: Open daily notes
+- `<leader>oD`: Open today's note
+- `<leader>oy`: Open yesterday's note
+- `<leader>oT`: Open tomorrow's note
+- `<leader>oi`: Paste image
+- `<leader>oL`: Create link to new note (normal/visual)
+- `<leader>oe`: Extract note (normal/visual)
+- `<leader>oN`: Insert template
+
 ### Buffer Management
 - `<leader>bn`: Next buffer
 - `<leader>bp`: Previous buffer
