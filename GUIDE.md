@@ -68,14 +68,11 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 - `Enter`: Confirm selection
 - `Ctrl+e`: Abort completion
 
-### Fuzzy Finder (fzf-lua)
+### Fuzzy Finder (telescope)
 - `<leader>ff`: Find files
 - `<leader>fg`: Live grep (search in files)
-- `<leader>fs`: Search in current file
 - `<leader>fb`: Find buffers
 - `<leader>fh`: Help tags
-- `<leader>fr`: Recent files
-- `<leader>fc`: Commands
 
 ### Git (gitsigns)
 - `]c`: Next hunk
@@ -175,7 +172,7 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 5. **mason.nvim**: LSP server installer
 6. **nvim-cmp**: Completion engine
 7. **LuaSnip**: Snippet engine
-8. **fzf-lua**: Fuzzy finder for files, buffers, and more
+8. **telescope.nvim**: Fuzzy finder for files, buffers, and more
 9. **gitsigns.nvim**: Git integration with hunk navigation and staging
 10. **vim-fugitive**: Git history navigation and repository management
 11. **undotree**: Undo history visualization

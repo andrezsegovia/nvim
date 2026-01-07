@@ -2,12 +2,57 @@ return {
   "epwalsh/obsidian.nvim",
   version = "*",
   lazy = true,
-  ft = "markdown",
+  event = {
+    "VimEnter",
+    "BufReadPre *.md",
+    "BufNewFile *.md",
+  },
+  cond = function()
+    local cwd = vim.fn.getcwd()
+    local file = vim.fn.expand("%:p")
+
+    -- List your vault paths
+    local vault_paths = {
+      vim.fn.expand("~/brain")
+    }
+
+    for _, vault in ipairs(vault_paths) do
+      if cwd:match("^" .. vault) or file:match("^" .. vault) then
+        return true
+      end
+    end
+
+    return false
+  end,
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
+    "nvim-telescope/telescope.nvim",
+    "nvim-treesitter/nvim-treesitter",
   },
   opts = {
-    workspaces = {},
+    workspaces = {
+      {
+        name = "brain",
+        path = "~/brain",
+        overrides = {
+          templates = {
+            folder = "Templates",
+            date_format = "%a-%d-%m-%Y",
+            time_format = "%H:%M",
+            substitutions = {
+              journalDate = function()
+                return os.date("%a%d%m%Y.md|%a-%d-%m-%Y")
+              end,
+            },
+          },
+          daily_notes = {
+            date_format = "%a%d%m%Y",
+            template = "Journal.md",
+          },
+        }
+      },
+    },
     note_id_func = function(title)
       -- Create filename from title
       if title ~= nil then
