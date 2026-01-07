@@ -93,6 +93,12 @@ This NeoVim configuration uses LazyVim as the plugin manager with a minimal setu
 - `<leader>fg`: Live grep (search in files)
 - `<leader>fb`: Find buffers
 - `<leader>fh`: Help tags
+- `<leader>fj`: Live grep in Java files only
+- `<leader>ft`: Live grep by file type (interactive prompt)
+
+**Command line usage:**
+- `:Telescope live_grep type_filter=java` - Search only in Java files
+- `:Telescope live_grep type_filter=py,js` - Search in Python and JavaScript files
 
 ### Git (gitsigns)
 - `]c`: Next hunk
