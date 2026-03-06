@@ -57,7 +57,6 @@ vim.keymap.set("v", "<leader>oL", "<cmd>ObsidianLinkNew<cr>", { desc = "Create l
 vim.keymap.set("n", "<leader>oe", "<cmd>ObsidianExtractNote<cr>", { desc = "Extract note" })
 vim.keymap.set("v", "<leader>oe", "<cmd>ObsidianExtractNote<cr>", { desc = "Extract note" })
 vim.keymap.set("n", "<leader>oN", "<cmd>ObsidianTemplate<cr>", { desc = "Insert template" })
-vim.keymap.set("n", "<leader>od", "<cmd>ObsidianToday<cr>", { desc = "Today daily note" })
 
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
