@@ -69,3 +69,13 @@ vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Step into" }
 vim.keymap.set("n", "<leader>do", "<cmd>DapStepOver<cr>", { desc = "Step over" })
 vim.keymap.set("n", "<leader>dO", "<cmd>DapStepOut<cr>", { desc = "Step out" })
 vim.keymap.set("n", "<leader>dt", "<cmd>DapTerminate<cr>", { desc = "Terminate" })
+
+vim.keymap.set('n', 'z=', function()
+  require('telescope.builtin').spell_suggest(require('telescope.themes').get_cursor({
+    previewer = false,
+    layout_config = {
+      width = 50,
+      height = 15,
+    }
+  }))
+end)

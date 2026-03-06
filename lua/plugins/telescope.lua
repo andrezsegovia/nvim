@@ -5,7 +5,14 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
   },
   config = function()
-    require("telescope").setup{}
+    require("telescope").setup{
+      defaults = {
+        cache_picker = {
+          num_pickers = 3,
+        }
+      }
+    }
+
     vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find files" })
     vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Live grep" })
     vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Find buffers" })
@@ -19,5 +26,7 @@ return {
         require("telescope.builtin").live_grep({ type_filter = file_type })
       end
     end, { desc = "Live grep by file type" })
+    vim.keymap.set("n", "<leader>fr", require("telescope.builtin").resume, { desc = "Resume last search" })
+    vim.keymap.set("n", "<leader>fp", require("telescope.builtin").pickers, { desc = "Open chache picker" })
   end,
 }
